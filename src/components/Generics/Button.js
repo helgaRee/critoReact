@@ -2,7 +2,7 @@ import "../../App.css"
 import React from 'react'
 
 
-const Button = ({type, title, url}) => {
+const Button = ({type, title, url, className}) => {
 
   const getButtonClassName = () => {
     switch(type) {
@@ -16,16 +16,10 @@ const Button = ({type, title, url}) => {
             return 'btn-transparent'
     }
   }
-
-  
-  
-
-
-
   return (
     <a className={getButtonClassName()} href={url}>
         {title}
-        <i className="fa-solid fa-arrow-up-right"></i>
+        <i className={className}></i>
     </a>
   )
 }

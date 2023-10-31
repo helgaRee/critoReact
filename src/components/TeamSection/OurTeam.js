@@ -1,9 +1,7 @@
 import React from 'react'
-import SectionTitle from '../Generics/SectionTitle'
 import Button from '../Generics/Button'
 import OurTeamBox from './OurTeamBox'
-
-
+import SectionTitle from '../Generics/SectionTitle'
 //IMAGES
 import teamKristine from '../../assets/images/team-kristine.png'
 import teamMark from '../../assets/images/team-mark.png'
@@ -42,13 +40,9 @@ const teams = [
     <section className="team">
     <div className="container">
         <div className="top-heading">
-    {/* <SectionTitle title="Meet Our Team" description="Experience Team Members" /> */}
-            <h2>meet our team</h2>
+    <SectionTitle title="Meet Our Team" description="Experience Team Members" />
             <div className="top-row">
-                <h3>experience team members
-                </h3>
-                <Button type="" title="Browse Team" url="/services" />
-                <i className="fa-regular fa-arrow-up-right"></i>
+                <Button type="" title="Browse Team" url="/services" className="arrow-top-right fa-regular fa-arrow-up-right"/>
             </div>
         </div>
         <div className="content">

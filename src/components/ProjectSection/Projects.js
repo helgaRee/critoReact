@@ -1,7 +1,6 @@
 import React from "react"
 import ProjectBox from "./ProjectBox"
 import SectionTitle from "../Generics/SectionTitle"
-
 import Button from "../Generics/Button"
 //IMAGES
 import caseBusiness from "../../assets/images/case-business.png"

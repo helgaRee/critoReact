@@ -706,9 +706,9 @@ body {
   .container {
     text-align: center;
     .top-heading {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 50px;
+      // display: flex;
+      // flex-direction: column;
+      // margin-bottom: 50px;
       @media (min-width: 992px) {
         text-align: left;
         margin-bottom: 40px;

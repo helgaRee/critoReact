@@ -1,10 +1,12 @@
 import React from 'react'
+import TestimonialBox from './TestimonialBox'
 import SectionTitle from '../Generics/SectionTitle'
+
 //IMAGES
 import rating1 from '../../assets/images/rater-1.jpg'
 import rating2 from '../../assets/images/rater-2.jpg'
 import rating3 from '../../assets/images/rater-3.jpg'
-import TestimonialBox from './TestimonialBox'
+import Button from '../Generics/Button'
 
 const Testimonial = () => {
 
@@ -49,8 +51,9 @@ const Testimonial = () => {
             ))}
         </article>
         <div className="center-content">
-            <a className="btn-black" href="projects.html">all reviews<i className="arrow-top-right fa-regular fa-arrow-up-right"></i>
-            </a>
+            {/* <a className="btn-black" href="projects.html">all reviews<i className="arrow-top-right fa-regular fa-arrow-up-right"></i>
+            </a> */}
+            <Button type="black" title="All Reviews" url="" className="arrow-top-right fa-regular fa-arrow-up-right" />
         </div>
     </div>
 </section>

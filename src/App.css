@@ -752,11 +752,6 @@ body {
 .team .container {
   text-align: center;
 }
-.team .container .top-heading {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-}
 @media (min-width: 992px) {
   .team .container .top-heading {
     text-align: left;
