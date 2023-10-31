@@ -5,15 +5,14 @@ import Features from "./components/FeaturesSection/Features"
 import Header from "./components/Header/Header"
 import OurServices from "./components/ServiceSection/OurServices"
 import Advertising from "./components/AdvertisingSection/Advertising"
-import Project from './components/ProjectSection/Projects'
 import Testimonial from "./components/TestimonialSection/Testimonial"
 import OurTeam from "./components/TeamSection/OurTeam"
-import Footer from "./components/Footer"
-
-
-
-
-
+import Footer from "./components/Footer/Footer"
+import Projects from "./components/ProjectSection/Projects"
+import About from "./components/AboutSection/About"
+import ChooseUs from "./components/ChooesUsSection/ChooseUs"
+import Articles from "./components/ArticleSection/Articles"
+import Subscribe from "./components/SubscribeSection/Subscribe"
 
 
 function App() {
@@ -21,15 +20,19 @@ function App() {
     <div className="wrapper">
       <Header />
       <main>
-        <Features />
-        <OurServices />
         <Advertising />
-        <Project />
+        <Features />
+        <About />
+        <OurServices />
+        <ChooseUs />
+        <Projects />
         <OurTeam />
         <Testimonial />
+        <Articles />
+        <Subscribe />
 
       </main>
-      <Footer />
+        <Footer />      
     </div>
   )
 }

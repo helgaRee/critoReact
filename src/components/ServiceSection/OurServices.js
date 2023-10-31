@@ -40,10 +40,12 @@ const OurServices = () => {
         alt="Background Lines"
       />
       <div className="container">
-        <SectionTitle
+      <SectionTitle
           title="Our Services"
           description="We Provide The Best Consulting Services"
         />
+
+        
         <div className="content">
           {/* Loopa igenom listans titlar */}
           {/* Mappar om listan, till en NY lista, och loopar ut */}
