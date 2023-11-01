@@ -37,20 +37,18 @@ const teams = [
 ]
 
   return (
-    <section className="team">
-    <div className="container">
-        <div className="top-heading">
-
-        <SectionTitle title="Meet Our Team" description="Experience Team Members" />
-    
-            <div className="top-row">
-                <Button type="" title="Browse Team" url="/services" className="fas fa-arrow-right" />
-                {/* <a className="btn-circle" href="/services">   <i className="fas fa-arrow-right"></i></a> */}
-            </div>
-        </div>
+        <section className="team">
+            <div className="container">
+                <div className="top-heading">
+                    <h2 className="section-title">Meet Our Team</h2>
+                    <div className="top-row">
+                        <h3 className="section-subtitle">Experience Team Members
+                        </h3>
+                        <Button type="" title="Browse Team" url="/services" className="fa-solid fa-arrow-up-right" />
+                    </div>
+                </div>
         <div className="content">
 {/* Loopa igenom listan ovan ocg skriv ut */}
-
             {teams.map((team, index) => (
                 < OurTeamBox
                 key={index}
@@ -58,9 +56,7 @@ const teams = [
                 title={team.title}
                 description={team.description} 
                 />
-
             ))}
-
         </div>
     </div>
     <div className="dots">
@@ -73,5 +69,4 @@ const teams = [
 </section>
   )
 }
-
 export default OurTeam

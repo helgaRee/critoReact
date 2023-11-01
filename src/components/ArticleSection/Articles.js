@@ -52,7 +52,7 @@ const Articles = ({url, image, date, month, title, subtitle, description}) => {
             <div className="top-row">
                 {/* <h3>get every single articles & news</h3> */}
                 <SectionTitle title="Article & News" description="Get Every Single Articles & News" />
-                <Button type="" title="Browse Articles" url="/articles" className="fas fa-arrow-right" />
+                <Button type="" title="Browse Articles" url="/articles" className="fa-solid fa-arrow-up-right" />
             </div>
         </div>
 

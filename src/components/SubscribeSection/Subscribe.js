@@ -9,7 +9,7 @@ const Subscribe = () => {
         <h2>Get News Updates By Signup</h2>
         <form className="input-box">
             <input type="text" placeholder="username@domain.com" />
-            <Button type="yellow" title="Subscribe" className="fas fa-arrow-right"/>
+            <Button type="yellow" title="Subscribe" className="fa-solid fa-arrow-up-right" />
         </form>
     </div>
 </section>

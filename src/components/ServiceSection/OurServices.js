@@ -58,7 +58,7 @@ const OurServices = () => {
             />
           ))}
         </div>
-        <Button type="" title="Browse Services" url="/services"   className="arrow-top-right fa-regular fa-arrow-up-right"/>
+        <Button type="" title="Browse Services" url="/services" className="fa-solid fa-arrow-up-right" />
       </div>
     </section>
   )

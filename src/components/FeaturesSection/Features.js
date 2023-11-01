@@ -44,7 +44,7 @@ const Features = () => {
               />
             </div>
             <div className="learn-more">
-              <Button type="yellow" title="Learn More" className="arrow-top-right fa-regular fa-arrow-up-right" />
+              <Button type="yellow" title="Learn More" className="fa-solid fa-arrow-up-right" />
             </div>
           </div>
           <div className="features-boxes">

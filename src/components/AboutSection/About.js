@@ -4,6 +4,7 @@ import React from 'react'
 import imgWavyLinesLeft from '../../assets/images/wavy-lines-left.svg'
 import imgAbout from '../../assets/images/Image-about.svg'
 import SectionTitle from '../Generics/SectionTitle'
+import Button from '../../components/Generics/Button'
 
 const About = () => {
   return (
@@ -32,8 +33,8 @@ const About = () => {
             </div>
             <div className="flex-row">
                 <div className="btn-top">
-                    <a className="btn-black" href="login.html">Learn More<i className="arrow-top-right fa-regular fa-arrow-up-right"></i>
-                    </a>
+                    <Button type="black" title="Learn More" className="fa-solid fa-arrow-up-right" />
+
                 </div>
                 <div className="btn-video">
                     <a className="btn-circle" href=" login.html">
