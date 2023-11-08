@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Generics/Button'
 import OurTeamBox from './OurTeamBox'
-import SectionTitle from "../Generics/SectionTitle"
+// import SectionTitle from "../Generics/SectionTitle"
 //IMAGES
 import teamKristine from '../../assets/images/team-kristine.png'
 import teamMark from '../../assets/images/team-mark.png'

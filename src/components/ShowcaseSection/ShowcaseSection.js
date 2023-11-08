@@ -1,5 +1,4 @@
 import Button from "../Generics/Button"
-import "../../components/ShowcaseSection/ShowcaseSection.css"
 import React from "react"
 import img_showcase from "../../assets/images/Image-showcase.png"
 import img_backgroundLines from "../../assets/images/background-lines.svg"
@@ -21,7 +20,7 @@ const ShowcaseSection = () => {
         <img
           className="img-showcase"
           src={img_showcase}
-          alt="showcase image of a man in a suit with a tablet"
+          alt=""
         />
       </div>
     </section>

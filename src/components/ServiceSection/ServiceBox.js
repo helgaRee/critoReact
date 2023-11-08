@@ -1,5 +1,3 @@
-
-import Button from '../Generics/Button'
 import React from 'react'
 
 //lägger till artiklar till ett objekt
@@ -10,8 +8,6 @@ const ServiceBox = ({title, description, url}) => {
     <h4>{title}</h4>
     <p>{description}</p>
     <a className="btn-circle" href={url}> <i className="fa-solid fa-arrow-right"></i>
-    {/* <Button type="circle" title="" url="" />
-    <i className="fa-solid fa-arrow-right"></i> */}
     </a>
 </div>
   )

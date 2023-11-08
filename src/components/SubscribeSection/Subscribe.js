@@ -2,6 +2,8 @@ import Button from '../../components/Generics/Button'
 import React from 'react'
 
 const Subscribe = () => {
+  
+
   return (
     <section className="subscribe">
     <img src="images/background-wavy-lines.svg" alt="" className="background-wavy-lines" />

@@ -1,16 +1,23 @@
 import "../../components/NavSection/NavSection.css"
 import React from 'react'
+// Hämtar hem NavLink
+import { Link, NavLink } from 'react-router-dom'
 import Button from '../Generics/Button'
 import img_logotype from '../../assets/images/logotype.svg'
+
+const toggleMenu = () => {
+    //vid klick, ska menyn öppnas
+
+}
 
 const NavSection = () => {
   return (
     <section className="nav-section">
         <div className="container">
-           <a className="logotype" href="index.html">
+           <Link to='/' className="logotype">
                <img src={img_logotype} alt="crito logotype" />
-           </a>
-           <button className="menu-bars">
+           </Link>
+           <button className="menu-bars" onClick={toggleMenu}>
                <i className="fa-solid fa-bars" aria-hidden="true"></i>
            </button>
            <div className="menu">
@@ -51,14 +58,18 @@ const NavSection = () => {
                        </a>
                    </div>
                </div>
+
                <div className="main-menu">
                    <nav>
-                       <a className="active" href="index.html">Home</a>
-                       <a href="service.html">Service</a>
-                       <a href="news.html">News</a>
-                       <a href="contacts.html">Contacts</a>
+                    <ul>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/services">Services</NavLink></li>
+                        <li><NavLink to="/news">News</NavLink></li>
+                        <li><NavLink to="/contacts">Contacts</NavLink></li>
+    
+                    </ul>
                    </nav>
-                   <Button type="yellow" title="Login" url="/login"/>
+                   <Button type="yellow" title="Login" url="/login" className="fa-solid fa-arrow-up-right" />
                </div>
            </div>
        </div>
