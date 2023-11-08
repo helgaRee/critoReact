@@ -1,25 +1,39 @@
 import "../../components/NavSection/NavSection.css"
-import React from 'react'
+import React, { useState } from 'react'
 // Hämtar hem NavLink
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useActionData, useSearchParams } from 'react-router-dom'
 import Button from '../Generics/Button'
 import img_logotype from '../../assets/images/logotype.svg'
+import Mobilmenu from "../MobileMenu/Mobilmenu"
 
-const toggleMenu = () => {
-    //vid klick, ska menyn öppnas
 
-}
+
 
 const NavSection = () => {
-  return (
-    <section className="nav-section">
+
+
+        const [menuOpen, setMenuOpen] = useState(false)
+    console.log(menuOpen)
+
+        return (
+            <section className="nav-section">
         <div className="container">
            <Link to='/' className="logotype">
                <img src={img_logotype} alt="crito logotype" />
            </Link>
-           <button className="menu-bars" onClick={toggleMenu}>
-               <i className="fa-solid fa-bars" aria-hidden="true"></i>
+
+           <button className="menu-bars btn-menu" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? (<i className="fa-solid fa-xmark"></i>) : ( <i className="fa-solid fa-bars"></i>)}
+              
            </button>
+
+
+          <>
+                {  menuOpen  ?  (<Mobilmenu />)  :  ( <></>)  }
+          </>
+          
+
+
            <div className="menu">
                <div className="top-menu">
                    <div className="contact-information">
@@ -76,5 +90,6 @@ const NavSection = () => {
    </section>
   )
 }
+
 
 export default NavSection

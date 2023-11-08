@@ -1,0 +1,33 @@
+.mobile-menu {
+    background-color: rgba(248, 222, 143, 0.962);
+    color: #FFF;
+    position: fixed; //friståemnde
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 50px 16px;
+
+    
+
+    a {
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 1.3em;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #191919;
+
+        &:hover {
+            background-color: rgba(81, 61, 3, 0.942);
+            color: #FFF;
+        }
+    }
+    .active {
+        background-color: rgba(81, 61, 3, 0.942);
+        color: #FFF;
+    }
+}

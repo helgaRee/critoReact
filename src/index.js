@@ -11,10 +11,12 @@ import NotFound from './views/NotFound';
 import Services from './views/Services';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>  {/* //tvingar en omrendering 2 gånger */}
     <BrowserRouter>
+
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/services' element={<Services />} />
