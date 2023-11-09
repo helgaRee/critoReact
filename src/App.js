@@ -13,7 +13,7 @@ import About from "./components/AboutSection/About"
 import ChooseUs from "./components/ChooesUsSection/ChooseUs"
 import Articles from "./components/ArticleSection/Articles"
 import Subscribe from "./components/SubscribeSection/Subscribe"
-import NewsArticles from "./components/NewsArticlesSection/NewsArticles"
+import NewsArticles from "./components/GetApiData/NewsArticles"
 import NewsSection from "./components/NewsSection/NewsSection"
 
 
@@ -32,7 +32,6 @@ function App() {
         <Testimonial />
         <Articles />
         <Subscribe />
-        <NewsArticles />
         <NewsSection />
 
       </main>

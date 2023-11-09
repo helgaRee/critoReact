@@ -6,7 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
 import News from './views/News';
+import NewsArticles from './views/News';
 import NewsDetails from './views/NewsDetails';
+
 import NotFound from './views/NotFound';
 import Services from './views/Services';
 
@@ -21,8 +23,13 @@ root.render(
             <Route path='/' element={<Home />} />
             <Route path='/services' element={<Services />} />
             <Route path='/contacts' element={<Contacts />} />
+
             <Route path='/news' element={<News />} />
-            <Route path='/newsdetails' element={<NewsDetails />} />
+
+            <Route path='/newsarticles' element={<NewsArticles />} />
+
+            <Route path='/newsarticles/:id' element={<NewsDetails />} />
+            
             <Route path='*' element={<NotFound />} />
         </Routes>
     </BrowserRouter>

@@ -63,62 +63,73 @@ const handleForm = async (e) => {
     //RENSAR FELMEDDELANDET FRÅN FÖRSTA BÖRJAN
     setErrorMessage('')
 
-
-  for(let element of e.target) {
-    switch (element.name) {
-      case 'name':
+    
+    
+    for(let element of e.target) {
+      switch (element.name) {
+        case 'name':
           setName(element.value) //SÄTTER VÄRDET
           setNameError(validateLength(element.value))  //VALIDERAR VÄRDET
           break;
-      case 'email':
-          setEmail(element.value) //SÄTTER VÄRDET
-          setEmailValid(validateEmail(element.value)) //VALIDERAR VÄRDET
+          case 'email':
+            setEmail(element.value) //SÄTTER VÄRDET
+            setEmailValid(validateEmail(element.value)) //VALIDERAR VÄRDET
           break;
-      case 'message':
-          setMessage(element.value) //SÄTTER VÄRDET
-          setMessageError(validateLength(element.value)) ///VALIDERAR VÄRDET
-          break;
-    }
-  }
-
- if (!nameError && !emailError && !messageError) {
-    //om alla errors är false, alltså finns inga fel, gör en await och skicka med fetch
-    const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
-      method: 'post',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        name, email, message
+          case 'message':
+            setMessage(element.value) //SÄTTER VÄRDET
+            setMessageError(validateLength(element.value)) ///VALIDERAR VÄRDET
+            break;
+          }
+        }
+        //ifsats för att skicka iväg formuläret OM inga fel finns
+        if (!nameError && !emailError && !messageError) {
+          //om alla errors är false, alltså finns inga fel, gör en await och skicka med fetch
+          const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
+            method: 'post',
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+              name, email, message
       })
     })
+    
+    //ifsats för felmeddelanden
     if (result.status === 200) {
       //sätt meddelande till succesMessage samt rensa formuläret om ivägskickat till api
       setSuccesMessage('Formuläret har skickats iväg!')
       setName('')
       setEmail('')
       setMessage('')
-
+      console.log(result.status) //kontroll
+      
+    } else if (nameError || emailError || messageError) {
+      setErrorMessage('Hmm, något gick fel.. du verkar inte fyllt i alla fält.')
+      console.log(result.status) //kontroll
     } else {
       setErrorMessage('Hmm, något gick fel..')
+      console.log(result.status) //kontroll
     }
-    
-      // 
-      //   console.log(resp)
   }
-
   
+  //räkna antalet ifyllda fält
+    const filledFields = [name, email, message].filter(field => field.trim() !== '');
+
+    //om endast 1 fält är ifyllt, sätt specifikt meddelande
+    if (filledFields.length < 3) {
+        setErrorMessage('Du måste fylla i alla fält.');
+    }
 }
 
-  
-
-  
   
 
   return (
     <section className="contact-form container">
       <h2>Leave us a message for any information</h2>
-      <p className="errorMessage successMessage">{errorMessage}{succesMessage}</p> 
+{/* OM errorMessage är true, add className errorMessage, om falskt add className succesMessage */}
+      <p className={`${errorMessage ? 'errorMessage' : 'succesMessage'}`}>
+                    {errorMessage}{succesMessage}
+      </p>
 {/* /sätter en onSumbit till formuläret, för att kunna SKICKA det vidare */}
       <form 
         onSubmit={handleForm}

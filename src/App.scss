@@ -1343,9 +1343,34 @@ body {
 }
 
 // Articles & News Section
+//ARticles from API**************
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  }
+
+    article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      img {
+        height: auto;
+        &:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
 
 
-.articles-news {
+
+//*******************************
+.articles {
   .container {
     .top-heading {
       display: flex;
@@ -1424,7 +1449,7 @@ body {
             background-color: #f9d783;
             width: 56px;
             height: 65px;
-            p {
+            .p-content {
               display: flex;
               flex-direction: column;
               justify-content: center;

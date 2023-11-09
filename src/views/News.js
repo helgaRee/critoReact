@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import NewsSection from '../components/NewsSection/NewsSection'
-import NewsArticles from '../components/NewsArticlesSection/NewsArticles'
+import NewsArticles from '../components/GetApiData/NewsArticles'
 import Subscribe from '../components/SubscribeSection/Subscribe'
 
 const News = () => {
@@ -11,8 +11,8 @@ const News = () => {
       
       <Header />
       <main>
-          <NewsSection />
           <NewsArticles />
+          <NewsSection />
           <Subscribe />
       </main>
       <Footer />

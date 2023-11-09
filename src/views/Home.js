@@ -11,9 +11,12 @@ import TeamSection from '../components/TeamSection/OurTeam'
 import Testimonial from '../components/TestimonialSection/Testimonial'
 import ArticleSection from '../components/ArticleSection/Articles'
 import Subscribe from '../components/SubscribeSection/Subscribe'
+import { useParams } from 'react-router-dom'
 
 
 const Home = () => {
+  const params = useParams()
+  const id=params.id
   return (
     <div className="wrapper">
       
