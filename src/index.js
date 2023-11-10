@@ -27,7 +27,7 @@ root.render(
             <Route path='/news' element={<News />} />
 
             <Route path='/newsarticles' element={<NewsArticles />} />
-
+            {/* <Route path="/newsarticles/:id" component={NewsArticles} /> */}
             <Route path='/newsarticles/:id' element={<NewsDetails />} />
             
             <Route path='*' element={<NotFound />} />

@@ -11,7 +11,7 @@ const News = () => {
       
       <Header />
       <main>
-          <NewsArticles />
+          
           <NewsSection />
           <Subscribe />
       </main>

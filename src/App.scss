@@ -1370,6 +1370,14 @@ body {
 
 
 //*******************************
+
+.title-business{
+  color: #191919;
+  font-size: 1em;
+  font-family: $font-family-DM;
+  font-weight: 100;
+}
+
 .articles {
   .container {
     .top-heading {
@@ -1427,7 +1435,7 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
       }
       a {
-        article {
+        .article-item {
           position: relative;
           display: flex;
           flex-direction: column;
@@ -2228,3 +2236,131 @@ textarea {
 }
 
 
+//EX
+.articles-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.content-article {
+  color: #191919;
+  
+}
+
+.title {
+  color: #191919;
+}
+.content-article {
+  color: #191919;
+}
+
+
+.articles-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  }
+  a {
+    .article-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .article.image {
+        height: auto;
+        &:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+      .box-date-article {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 20px;
+        left: 28px;
+        text-align: center;
+        background-color: #f9d783;
+        width: 56px;
+        height: 65px;
+        .content-article {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          margin-bottom: 0;
+          text-align: center;
+
+          span {
+            font-family: $font-family-DM;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: -10px;
+          }
+        }
+        font-family: $font-family-Inter;
+        font-weight: 400;
+        font-size: 16px;
+        @media (min-width: 768px) {
+          top: 11px;
+          left: 10px;
+        }
+        @media (min-width: 1200px) {
+          top: 12px;
+          left: 13px;
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+        &:hover h4,
+        &:hover h5 {
+          text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+          margin-left: 0;
+        }
+        h4 {
+          font-family: $font-family-Inter;
+          font-size: 16px;
+          color: #6a6c71;
+          font-weight: 400;
+          margin-top: 30px;
+          margin-bottom: 35px;
+          max-width: fit-content;
+          text-align: center;
+          @media (min-width: 768px) {
+            align-self: flex-start;
+          }
+        }
+        h5 {
+          font-family: $font-family-DM;
+          font-weight: 700;
+          margin-bottom: 25px;
+          text-align: center;
+          @media (min-width: 768px) {
+            text-align: left;
+          }
+        }
+        p {
+          font-family: $font-family-Inter;
+          font-size: 16px;
+          color: #6a6c71;
+          font-weight: 400;
+          text-align: center;
+          @media (min-width: 768px) {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
