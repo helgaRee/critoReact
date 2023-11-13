@@ -33,6 +33,7 @@ function App() {
         <Articles />
         <Subscribe />
         <NewsSection />
+        <NewsArticles />
 
       </main>
         <Footer />      

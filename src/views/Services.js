@@ -1,16 +1,13 @@
 import React from 'react'
-import Header from '../components/Header/Header'
+
 import Footer from '../components/Footer/Footer'
+import NotFound from './NotFound'
+import Header from '../components/Header/Header'
 
 const Services = () => {
   return (
-    <div className="wrapper">
-      
-      <Header />
-      <main>
-        
-      </main>
-      <Footer />
+    <div className="mt-5">
+        <NotFound />
     </div>
   )
 }

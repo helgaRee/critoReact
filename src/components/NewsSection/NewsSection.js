@@ -4,6 +4,8 @@ import Button from '../../components/Generics/Button';
 import SectionTitle from '../Generics/SectionTitle';
 import NewsBox from '../NewsSection/NewsBox';
 
+//KOMPONENT FÖR NEWS PAGE
+
 const NewsSection = () => {
     const [articles, setArticles] = useState([]);
 
@@ -38,7 +40,7 @@ const NewsSection = () => {
 
                 <div className="articles">
                     {articles.map((article) => (
-                        <Link key={article.id} to={`/newsarticles/${article.id}`} className="article-list-link">
+                        <Link key={article.id} to={`/newsdetail/${article.id}`} className="article-list-link">
                             <NewsBox
                                 key={article.id}
                                 id={article.id}

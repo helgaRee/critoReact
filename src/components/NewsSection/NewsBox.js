@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ArticleBox = ({ id, title, content, author, published, category, imageUrl }) => {
     return (
-        <a className="link-no-style" href={`/newsarticles/${id}`}>
+        
             <article className="article-item">
-                <img className="img-1" src={imageUrl} alt={`Bild för ${title}`} />
+                <img className="img-1 articleImg" src={imageUrl} alt={`Bild för ${title}`} />
                 <div className="box-date box-date-article">
                     <p className="content-date-article">
                         <span>{new Date(published).getDate()}</span>
@@ -18,7 +19,7 @@ const ArticleBox = ({ id, title, content, author, published, category, imageUrl 
                     <p className="content-article">{content}</p>
                 </div>
             </article>
-        </a>
+      
     );
 };
 

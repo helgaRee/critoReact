@@ -1,5 +1,5 @@
 import Button from "../Generics/Button"
-import React, { useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 
 const ContactForm = () => {
   //Hämta information och skicka iväg, med UseState
@@ -14,6 +14,11 @@ const [message, setMessage] = useState('')
 const [messageError, setMessageError] = useState(false)
 const [errorMessage, setErrorMessage] = useState('')
 const [succesMessage, setSuccesMessage] = useState('')
+const refName = useRef(null)
+// Använder useffekt för att omrendera komponenten, och i den använda useRef för att fokusera inputfältet vid start, med objektet current och .focus()
+useEffect(() => {
+  refName.current.focus() 
+}, [])
 
 
 const handleChange = (e) => {
@@ -148,6 +153,7 @@ const handleForm = async (e) => {
             name="name"
             placeholder="Name"
             tabIndex="1"
+            ref ={refName}
           />
         </div>
         <div className="mb-3">
