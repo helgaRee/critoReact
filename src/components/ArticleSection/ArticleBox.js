@@ -12,9 +12,9 @@ const ArticleBox = ({url, image, date, month, title, subtitle, description}) => 
                 <span>{date}</span>{month}
             </p>
         </div>
-        <div className="content">
-            <h4>{title}</h4>
-            <h5>{subtitle}</h5>
+        <div className="content-article">
+            <h3 className="title-business">{title}</h3>
+            <h4 className="title-article">{subtitle}</h4>
             <p>{description}</p>
         </div>
     </article>

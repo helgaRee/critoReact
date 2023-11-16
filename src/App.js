@@ -1,6 +1,5 @@
 import "./App.css"
 
-
 import Features from "./components/FeaturesSection/Features"
 import Header from "./components/Header/Header"
 import OurServices from "./components/ServiceSection/OurServices"
@@ -13,7 +12,6 @@ import About from "./components/AboutSection/About"
 import ChooseUs from "./components/ChooesUsSection/ChooseUs"
 import Articles from "./components/ArticleSection/Articles"
 import Subscribe from "./components/SubscribeSection/Subscribe"
-import NewsArticles from "./components/GetApiData/NewsArticles"
 import NewsSection from "./components/NewsSection/NewsSection"
 
 
@@ -33,7 +31,6 @@ function App() {
         <Articles />
         <Subscribe />
         <NewsSection />
-        <NewsArticles />
 
       </main>
         <Footer />      

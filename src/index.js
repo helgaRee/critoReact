@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
 import News from './views/News';
-import NewsArticles from './views/News';
+
 import NewsDetails from './views/NewsDetails';
 
 import NotFound from './views/NotFound';
@@ -26,7 +26,7 @@ root.render(
 
             <Route path='/news' element={<News />} />
 
-            <Route path='/newsarticles' element={<NewsArticles />} />
+ 
             {/* <Route path="/newsarticles/:id" component={NewsArticles} /> */}
             <Route path='/newsdetail/:id' element={<NewsDetails />} />
             

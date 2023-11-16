@@ -32,10 +32,7 @@ const NewsSection = () => {
         <section className="articles-news">
             <div className="container">
                 <div className="top-heading">
-                    <div className="top-row">
-                        <SectionTitle title="Artiklar & Nyheter" content="Få Varje Enstaka Artikel & Nyhet" />
-                        <Button type="" title="Bläddra Artiklar" url="/articles" className="fa-solid fa-arrow-up-right" />
-                    </div>
+                    <h3 className="section-subtitle">Our News & Articles</h3>
                 </div>
 
                 <div className="articles">
@@ -46,7 +43,7 @@ const NewsSection = () => {
                                 id={article.id}
                                 title={article.title}
                                 content={article.content}
-                                author={article.author}
+                                // author={article.author}
                                 published={article.published}
                                 category={article.category}
                                 imageUrl={article.imageUrl}
@@ -55,12 +52,14 @@ const NewsSection = () => {
                     ))}
                 </div>
             </div>
-            <div className="dots">
-                <span className="dot dot-active"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
+            <div className="next-page">
+                <a href="#" className="previous link-no-style"><i className="fa-solid fa-chevron-left"></i></a>
+                <a href="#" className="page-number page-number-one link-no-style">1</a>
+                <a href="#" className="page-number link-no-style">2</a>
+                <a href="#" className="page-number link-no-style">3</a>
+                <a href="#" className="page-number link-no-style">...</a>
+                <a href="#" className="page-number link-no-style">9</a>
+                <a href="#" className="next link-no-style"><i className="fa-solid fa-chevron-right"></i></a>
             </div>
         </section>
     );

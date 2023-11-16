@@ -1,18 +1,19 @@
 import Button from '../../components/Generics/Button'
-import React from 'react'
-import SectionTitle from '../Generics/SectionTitle'
-
+import React, { useState, useEffect } from 'react'
 //Images
 import imgArticle1 from '../../assets/images/article-1.png'
 import imgArticle2 from '../../assets/images/article-2.png'
 import imgArticle3 from '../../assets/images/article-3.png'
 import ArticleBox from './ArticleBox'
+import { Link } from 'react-router-dom'
+
 
 
 const Articles = ({url, image, date, month, title, subtitle, description}) => {
 
+
     //Lista
-    const articles = [
+    const articlesList = [
         {
             url: "/articles/digitalization /",
             image: imgArticle1,
@@ -52,13 +53,16 @@ const Articles = ({url, image, date, month, title, subtitle, description}) => {
             <div className="top-row">
                 <h3>get every single articles & news</h3>
                 {/* <SectionTitle title="Article & News" description="Get Every Single Articles & News" /> */}
-                <Button type="" title="Browse Articles" url="/articles" className="fa-solid fa-arrow-up-right" />
+                <Link to={`/news`}><Button type="" title="Browse Articles" url="/articles" className="fa-solid fa-arrow-up-right" /> </Link>
             </div>
         </div>
 
         <div className="articles">
 
-        {articles.map((article, index) => (
+        {articlesList.map((article, index) => (
+   
+   <Link to={`/news`} className="article-list-link">
+
             <ArticleBox 
                 key={index}
                 url={article.url}
@@ -68,7 +72,8 @@ const Articles = ({url, image, date, month, title, subtitle, description}) => {
                 title={article.title}
                 subtitle={article.subtitle}
                 description={article.description}
-            />
+                />
+            </Link>
         ))}
 
         </div>

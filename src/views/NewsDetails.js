@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 import Articles from "../components/ArticleSection/Articles"
+import Subscribe from "../components/SubscribeSection/Subscribe"
 
 //KOMPONENT FÖR ENSKILD ARTIKEL
 
 const NewsDetails = () => {
   const [article, setArticle] = useState({})
   const [errorMessage, setErrorMessage] = useState()
+
   //hämtar ut ID med react-hooken useParams
   const { id } = useParams()
 
@@ -18,8 +20,10 @@ const NewsDetails = () => {
 
   // körs igång direkt när newsdetails-sidan öppnas. hämtning till url sker
   useEffect(() => {
-    getArticle()
+    getArticle();
   }, [])
+
+
 
   // hämta artikeln
   const getArticle = async () => {
@@ -61,24 +65,29 @@ const NewsDetails = () => {
       <Header />
       <section className="wrapper container">
 
-      <main className="article-main-left">
-        <p className="errorMessage">{errorMessage}</p>
-        {/* Hämtar artiklarna från API */}
-        {/* Hämta ut id-parametern!*/}
-        <h2 className="article-title">{article.title}</h2>
+      <main className="article-main-left container">
+        <div classname="top-content">
+            <p className="errorMessage">{errorMessage}</p>
+            {/* Hämtar artiklarna från API */}
+            {/* Hämta ut id-parametern!*/}
+            <h3 className="article-title">{article.title}</h3>
 
-        <div className="article-subtitles">
-          <div className="article-published">{formatPublishedDate(article.published)}</div>
-          <div className="article-category">{article.category}</div>
-          <div className="article-author">{article.author}</div>
+            <div className="article-subtitles">
+            {/* vid hämtning av article-published, anropas funktionen där det nya, returnerade värdet ersätter det ursprungliga värdet. */}
+              <div className="article-published">{formatPublishedDate(article.published)}</div>
+              <div className="article-category">{article.category}</div>
+              <div className="article-author">{article.author}</div>
+            </div>
         </div>
+        {/* <div className="article-imageUrl">{article.imageUrl}</div> */}
 
-        <div className="article-imageUrl">{article.imageUrl}</div>
- 
+        <div className="article-image">
+            {/* om article.imageUrl finns, visa img-tagg */}
+            {article.imageUrl && (
+              <img src={article.imageUrl} alt={article.title} />
+            )}
+          </div>
         <div className="article-content">{article.content}</div>
-
-
-
         <div className="keywords">
           <h6>Digitalization</h6>
           <h6>School</h6>
@@ -89,7 +98,7 @@ const NewsDetails = () => {
         </div>
       </main>
 
-      <div className="menu-right">
+      <div className="menu-right container">
         <div>
           <div className="searchbar-right"><i className="fa-solid fa-magnifying-glass"></i> <input className="searchbar" placeholder="Type to search..."></input></div>
          
@@ -133,6 +142,7 @@ const NewsDetails = () => {
       </div>
       </section>
 <Articles />
+<Subscribe />
       <Footer />
     </div>
   )
