@@ -24,3 +24,5 @@ const ArticleBox = ({ id, title, content, author, published, category, imageUrl 
 };
 
 export default ArticleBox;
+
+

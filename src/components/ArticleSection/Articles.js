@@ -48,10 +48,10 @@ const Articles = ({url, image, date, month, title, subtitle, description}) => {
     <section className="articles-news">
     <div className="container">
         <div className="top-heading">
-            {/* <h2>article & news</h2> */}
+            <h2>article & news</h2>
             <div className="top-row">
-                {/* <h3>get every single articles & news</h3> */}
-                <SectionTitle title="Article & News" description="Get Every Single Articles & News" />
+                <h3>get every single articles & news</h3>
+                {/* <SectionTitle title="Article & News" description="Get Every Single Articles & News" /> */}
                 <Button type="" title="Browse Articles" url="/articles" className="fa-solid fa-arrow-up-right" />
             </div>
         </div>
