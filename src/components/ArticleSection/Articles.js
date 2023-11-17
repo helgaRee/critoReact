@@ -61,7 +61,7 @@ const Articles = ({url, image, date, month, title, subtitle, description}) => {
 
         {articlesList.map((article, index) => (
    
-   <Link to={`/news`} className="article-list-link">
+   <Link to={`/news`} className="article-list-link" key={index}>
 
             <ArticleBox 
                 key={index}

@@ -2,6 +2,7 @@ import React from "react"
 import ServiceBox from "./ServiceBox"
 import SectionTitle from "../Generics/SectionTitle"
 import Button from "../Generics/Button"
+import imgBackgroundLinesRight from "../../assets/images/background-lines-right.svg"
 
 const OurServices = () => {
   // skapar en lista att samla artiklar
@@ -36,7 +37,7 @@ const OurServices = () => {
     <section className="service-section">
       <img
         className="background-lines-right"
-        src="images/background-lines-right.svg"
+        src={imgBackgroundLinesRight}
         alt="Background Lines"
       />
       <div className="container">

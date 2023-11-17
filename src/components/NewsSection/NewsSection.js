@@ -32,7 +32,7 @@ const NewsSection = () => {
         <section className="articles-news">
             <div className="container">
                 <div className="top-heading">
-                    <h3 className="section-subtitle">Our News & Articles</h3>
+                    <h3 className="section-subtitle subtitle-news-section">Our News & Articles</h3>
                 </div>
 
                 <div className="articles">
