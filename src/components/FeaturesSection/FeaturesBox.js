@@ -1,17 +1,12 @@
-import React from 'react'
-//importera IMG
-import icon_handshake from '../../assets/images/Icon-handshake.svg'
+import React from "react"
 
-const FeaturesBox = ({icon, title, description}) => {
+const FeaturesBox = ({ icon, title, description }) => {
   return (
-
-
     <div className="features-box">
-        <img src={icon} alt="icon of a handshake" />
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <img src={icon} alt="icon" />
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
-
   )
 }
 

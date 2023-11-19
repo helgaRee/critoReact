@@ -14,7 +14,6 @@ import Articles from "./components/ArticleSection/Articles"
 import Subscribe from "./components/SubscribeSection/Subscribe"
 import NewsSection from "./components/NewsSection/NewsSection"
 
-
 function App() {
   return (
     <div className="wrapper">
@@ -31,9 +30,8 @@ function App() {
         <Articles />
         <Subscribe />
         <NewsSection />
-
       </main>
-        <Footer />      
+      <Footer />
     </div>
   )
 }

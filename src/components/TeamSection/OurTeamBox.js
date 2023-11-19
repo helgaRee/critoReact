@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 
-const OurTeamBox = ({image, title, description}) => {
+const OurTeamBox = ({ image, title, description }) => {
   return (
     <div className="box">
-        <img src={image} alt="" />
-        <p>{title}</p>
-        <p className="descr-txt">{description}</p>
+      <img src={image} alt="" />
+      <p>{title}</p>
+      <p className="descr-txt">{description}</p>
     </div>
   )
 }

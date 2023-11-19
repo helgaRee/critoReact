@@ -32,7 +32,7 @@ const OurServices = () => {
       url: "/services/riskmanagement /",
     },
   ]
-  
+
   return (
     <section className="service-section">
       <img
@@ -41,12 +41,11 @@ const OurServices = () => {
         alt="Background Lines"
       />
       <div className="container">
-      <SectionTitle
+        <SectionTitle
           title="Our Services"
           description="We Provide The Best Consulting Services"
         />
 
-        
         <div className="content">
           {/* Loopa igenom listans titlar */}
           {/* Mappar om listan, till en NY lista, och loopar ut */}
@@ -59,7 +58,12 @@ const OurServices = () => {
             />
           ))}
         </div>
-        <Button type="" title="Browse Services" url="/services" className="fa-solid fa-arrow-up-right" />
+        <Button
+          type=""
+          title="Browse Services"
+          url="/services"
+          className="fa-solid fa-arrow-up-right"
+        />
       </div>
     </section>
   )

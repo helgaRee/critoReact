@@ -1,13 +1,10 @@
-import React from 'react'
-
-import Footer from '../components/Footer/Footer'
-import NotFound from './NotFound'
-import Header from '../components/Header/Header'
+import React from "react"
+import NotFound from "./NotFound"
 
 const Services = () => {
   return (
     <div className="mt-5">
-        <NotFound />
+      <NotFound />
     </div>
   )
 }

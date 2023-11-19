@@ -3,10 +3,10 @@ import FeaturesBox from "./FeaturesBox"
 import SectionTitle from "../Generics/SectionTitle"
 import Button from "../Generics/Button"
 //ICONS
-import iconHandshake from '../../assets/images/Icon-handshake.svg'
-import iconLightbuld from '../../assets/images/Icon-lightbulb.svg'
-import iconGraf from '../../assets/images/Icon-graf.svg'
-import iconSettings from '../../assets/images/Icon-settings.svg'
+import iconHandshake from "../../assets/images/Icon-handshake.svg"
+import iconLightbuld from "../../assets/images/Icon-lightbulb.svg"
+import iconGraf from "../../assets/images/Icon-graf.svg"
+import iconSettings from "../../assets/images/Icon-settings.svg"
 
 const Features = () => {
   const featuresListItems = [
@@ -44,7 +44,11 @@ const Features = () => {
               />
             </div>
             <div className="learn-more">
-              <Button type="yellow" title="Learn More" className="fa-solid fa-arrow-up-right" />
+              <Button
+                type="yellow"
+                title="Learn More"
+                className="fa-solid fa-arrow-up-right"
+              />
             </div>
           </div>
           <div className="features-boxes">

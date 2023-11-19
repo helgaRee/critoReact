@@ -381,6 +381,7 @@ body {
         }
 
         .social-media {
+
           // Tar bort understreck för länkar
           a {
             text-decoration: none;
@@ -1663,6 +1664,7 @@ body {
     .articles {
       .article-item {
         .content {
+
           &:hover h4,
           &:hover h5 {
             text-decoration: underline;
@@ -1688,6 +1690,7 @@ body {
 
           p {
             text-align: center;
+
             @media (min-width: 768px) {
               text-align: left;
             }

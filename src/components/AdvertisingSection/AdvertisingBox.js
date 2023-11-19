@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
-const AdvertisingBox = ({image}) => {
+const AdvertisingBox = ({ image }) => {
   return (
     <div>
-    <img src={image} alt="" />
+      <img src={image} alt="" />
     </div>
   )
 }

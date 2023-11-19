@@ -2,175 +2,206 @@
 
 
 .articles-news {
-    .container {
-      .top-heading {
+  .container {
+    .top-heading {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+      text-align: center;
+
+      @media (min-width: 992px) {
+        text-align: left;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        margin-top: 70px;
+        margin-bottom: 30px;
+      }
+
+      .top-row {
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
-        text-align: center;
+
         @media (min-width: 992px) {
-          text-align: left;
-          margin-bottom: 40px;
-        }
-        h2 {
-          margin-top: 70px;
-          margin-bottom: 30px;
-        }
-        .top-row {
-          display: flex;
-          flex-direction: column;
-          @media (min-width: 992px) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-content: center;
-            align-items: baseline;
-          }
-        }
-        h3 {
-          padding-bottom: 0;
-          padding-top: 0;
-          @media (min-width: 992px) {
-            margin-bottom: 0;
-          }
-        }
-        a {
-          display: block;
-          justify-content: center;
-          align-items: center;
-          align-self: center;
-          &:hover {
-            transform: scale(1.1);
-          }
-          @media (min-width: 992px) {
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 40px;
-            padding-left: 40px;
-          }
+          flex-direction: row;
+          justify-content: space-between;
+          align-content: center;
+          align-items: baseline;
         }
       }
-      .articles {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-        text-align: center;
-        @media (min-width: 576px) {
-          grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+
+      h3 {
+        padding-bottom: 0;
+        padding-top: 0;
+
+        @media (min-width: 992px) {
+          margin-bottom: 0;
         }
-        a {
-          article {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            img {
-              height: auto;
-              &:hover {
-                opacity: 0.8;
-                transition: 0.5s ease-in-out;
-              }
-            }
-            .box-date {
-              position: absolute;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              top: 20px;
-              left: 28px;
-              text-align: center;
-              background-color: #f9d783;
-              width: 56px;
-              height: 65px;
-              p {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-content: center;
-                margin-bottom: 0;
-                text-align: center;
-                span {
-                  font-family: $font-family-DM;
-                  font-size: 22px;
-                  font-weight: 700;
-                  margin-bottom: -10px;
-                }
-              }
-              font-family: $font-family-Inter;
-              font-weight: 400;
-              font-size: 16px;
-              @media (min-width: 768px) {
-                top: 11px;
-                left: 10px;
-              }
-              @media (min-width: 1200px) {
-                top: 12px;
-                left: 13px;
-              }
-            }
-            .content {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              max-width: 80%;
-              margin: 0 auto;
-              &:hover h4,
-              &:hover h5 {
-                text-decoration: underline;
-              }
-              @media (min-width: 768px) {
-                margin-left: 0;
-              }
-              h4 {
-                font-family: $font-family-Inter;
-                font-size: 16px;
-                color: #6a6c71;
-                font-weight: 400;
-                margin-top: 30px;
-                margin-bottom: 35px;
-                max-width: fit-content;
-                text-align: center;
-                @media (min-width: 768px) {
-                  align-self: flex-start;
-                }
-              }
-              h5 {
-                font-family: $font-family-DM;
-                font-weight: 700;
-                margin-bottom: 25px;
-                text-align: center;
-                @media (min-width: 768px) {
-                  text-align: left;
-                }
-              }
-              p {
-                font-family: $font-family-Inter;
-                font-size: 16px;
-                color: #6a6c71;
-                font-weight: 400;
-                text-align: center;
-                @media (min-width: 768px) {
-                  text-align: left;
-                }
-              }
-            }
-          }
+      }
+
+      a {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        @media (min-width: 992px) {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 40px;
+          padding-left: 40px;
         }
       }
     }
-    .dots {
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
       text-align: center;
-      margin-top: 55px;
-      margin-bottom: 100px;
-      .dot {
-        height: 15px;
-        width: 15px;
-        background-color: #707070;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 6px;
+
+      @media (min-width: 576px) {
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
       }
-      .dot-active {
-        background-color: #191919;
+
+      a {
+        article {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          img {
+            height: auto;
+
+            &:hover {
+              opacity: 0.8;
+              transition: 0.5s ease-in-out;
+            }
+          }
+
+          .box-date {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 20px;
+            left: 28px;
+            text-align: center;
+            background-color: #f9d783;
+            width: 56px;
+            height: 65px;
+
+            p {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              margin-bottom: 0;
+              text-align: center;
+
+              span {
+                font-family: $font-family-DM;
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: -10px;
+              }
+            }
+
+            font-family: $font-family-Inter;
+            font-weight: 400;
+            font-size: 16px;
+
+            @media (min-width: 768px) {
+              top: 11px;
+              left: 10px;
+            }
+
+            @media (min-width: 1200px) {
+              top: 12px;
+              left: 13px;
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 80%;
+            margin: 0 auto;
+
+            &:hover h4,
+            &:hover h5 {
+              text-decoration: underline;
+            }
+
+            @media (min-width: 768px) {
+              margin-left: 0;
+            }
+
+            h4 {
+              font-family: $font-family-Inter;
+              font-size: 16px;
+              color: #6a6c71;
+              font-weight: 400;
+              margin-top: 30px;
+              margin-bottom: 35px;
+              max-width: fit-content;
+              text-align: center;
+
+              @media (min-width: 768px) {
+                align-self: flex-start;
+              }
+            }
+
+            h5 {
+              font-family: $font-family-DM;
+              font-weight: 700;
+              margin-bottom: 25px;
+              text-align: center;
+
+              @media (min-width: 768px) {
+                text-align: left;
+              }
+            }
+
+            p {
+              font-family: $font-family-Inter;
+              font-size: 16px;
+              color: #6a6c71;
+              font-weight: 400;
+              text-align: center;
+
+              @media (min-width: 768px) {
+                text-align: left;
+              }
+            }
+          }
+        }
       }
     }
   }
-  
+
+  .dots {
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 100px;
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: #707070;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .dot-active {
+      background-color: #191919;
+    }
+  }
+}

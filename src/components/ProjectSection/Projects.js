@@ -52,7 +52,12 @@ const Projects = () => {
           ))}
         </div>
         <div className="center-content">
-          <Button type="black" title="All Recent Projects" url="/projects" className="fa-solid fa-arrow-up-right" />
+          <Button
+            type="black"
+            title="All Recent Projects"
+            url="/projects"
+            className="fa-solid fa-arrow-up-right"
+          />
         </div>
       </div>
     </section>

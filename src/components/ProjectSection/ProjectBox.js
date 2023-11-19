@@ -7,8 +7,6 @@ const ProjectBox = ({image, title, url, className}) => {
     <img src={image} alt="A mans hands reading a business paper" />
     <h4>{title}</h4>
     <Button type="" title="Read More" url="/readMore" className="fa-regular fa-arrow-up-right"/>
-    {/* <a className="btn-transparent" href={url}>read more<i className="fa-regular fa-arrow-up-right"></i>
-    </a> */}
 </div>
   )
 }

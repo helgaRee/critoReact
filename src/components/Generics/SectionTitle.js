@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
-const SectionTitle = ({title, description}) => {
+const SectionTitle = ({ title, description }) => {
   return (
     <>
-            <h2 className="section-title">{title}</h2>
-            <h3 className="section-subtitle">{description}</h3>
+      <h2 className="section-title">{title}</h2>
+      <h3 className="section-subtitle">{description}</h3>
     </>
   )
 }
